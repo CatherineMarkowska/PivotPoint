@@ -13,14 +13,17 @@ import WorkNEarnBranch3 from './components/WorkNEarnBranch-3'
 import WorkNEarnBranch4 from './components/WorkNEarnBranch-4'
 import WorkNEarnBranch5 from './components/WorkNEarnBranch-5'
 import WorkNEarnBranch6 from './components/WorkNEarnBranch-6'
+import hopefulAudio from './components/753968__evanboyerman__hopeful-cinematic-emotional-orchestra-background-music.wav'
 
 
 
 
 
 function App() {
-
   const [view, setView] = useState('home') // home | now | how | stories | era | roles | bank-clerk | stay-calm | work-earn-0..10 | story
+  const bgAudioRef = useRef(null)
+  const [bgAudioEnabled, setBgAudioEnabled] = useState(false)
+  const [audioUnlocked, setAudioUnlocked] = useState(false)
 
   const [ticketEmail, setTicketEmail] = useState('')
   const [ticketPurchased, setTicketPurchased] = useState(false)
@@ -161,12 +164,28 @@ function App() {
       window.removeEventListener('load', centerFeatured)
     }
   }, [view])
+
+  useEffect(() => {
+    if (!bgAudioRef.current) return
+    if (!bgAudioEnabled || !audioUnlocked) return
+    bgAudioRef.current.play().catch(() => {})
+  }, [bgAudioEnabled, audioUnlocked])
   
   
-    return (
-    <div className="app">
+  return (
+    <div
+      className="app"
+      onPointerDown={() => {
+        if (audioUnlocked) return
+        setAudioUnlocked(true)
+        if (bgAudioEnabled && bgAudioRef.current) {
+          bgAudioRef.current.play().catch(() => {})
+        }
+      }}
+    >
+      <audio ref={bgAudioRef} src={hopefulAudio} preload="auto" loop />
       <div className="promo-bar">
-        Get tickets to see The Great Depression at our Early Access Event on {earlyAccessDate} and score a Roar Pack!
+        Get tickets to see The Great Depression at our Early Access Event on {earlyAccessDate}
       </div>
       <header className="site-header">
         <div className="logo">
@@ -373,7 +392,19 @@ function App() {
         </section>
       )}
 
-      {view === 'era' && <Era onStart={() => setView('roles')} />}
+      {view === 'era' && (
+        <Era
+          onStart={() => setView('roles')}
+          onIntroAudioEnd={() => setBgAudioEnabled(true)}
+          onIntroAudioStart={() => {
+            setBgAudioEnabled(false)
+            if (bgAudioRef.current) {
+              bgAudioRef.current.pause()
+              bgAudioRef.current.currentTime = 0
+            }
+          }}
+        />
+      )}
 
       {view === 'roles' && (
         <RoleSelect
