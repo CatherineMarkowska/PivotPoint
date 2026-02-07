@@ -46,12 +46,7 @@ function StayCalmWait({ onWorkEarn }) {
       </div>
 
 
-      <div className="stay-calm__status">
-        <p>Savings: $1,300</p>
-        <p>Employment: Bank Clerk</p>
-        <p>Family Moral: Stable</p>
-      </div>
-
+      
       <div className="stay-calm__actions">
          <button type="button" >
           Deny the offer!
