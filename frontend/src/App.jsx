@@ -6,14 +6,24 @@ import RoleSelect from './components/RoleSelect'
 import BankClerkPath from './components/BankClerkPath'
 import StayCalmWait from './components/StayCalmWait'
 import StoryScene from './components/StoryScene'
-import WorkNEarn from './components/WorkNEarn'
+import WorkNEarnBranch0 from './components/WorkNEarnBranch-0'
+import WorkNEarnBranch1 from './components/WorkNEarnBranch-1'
+import WorkNEarnBranch2 from './components/WorkNEarnBranch-2'
+import WorkNEarnBranch3 from './components/WorkNEarnBranch-3'
+import WorkNEarnBranch4 from './components/WorkNEarnBranch-4'
+import WorkNEarnBranch5 from './components/WorkNEarnBranch-5'
+import WorkNEarnBranch6 from './components/WorkNEarnBranch-6'
+import WorkNEarnBranch7 from './components/WorkNEarnBranch-7'
+import WorkNEarnBranch8 from './components/WorkNEarnBranch-8'
+import WorkNEarnBranch9 from './components/WorkNEarnBranch-9'
+import WorkNEarnBranch10 from './components/WorkNEarnBranch-10'
 
 
 
 
 function App() {
 
-  const [view, setView] = useState('home') // home | now | how | stories | era | roles | bank-clerk | stay-calm | work-earn | story
+  const [view, setView] = useState('home') // home | now | how | stories | era | roles | bank-clerk | stay-calm | work-earn-0..10 | story
 
   const [ticketEmail, setTicketEmail] = useState('')
   const [ticketPurchased, setTicketPurchased] = useState(false)
@@ -382,9 +392,19 @@ function App() {
 
       {view === 'bank-clerk' && <BankClerkPath onStayCalm={() => setView('stay-calm')} />}
 
-      {view === 'stay-calm' && <StayCalmWait onWorkEarn={() => setView('work-earn')} />}
+      {view === 'stay-calm' && <StayCalmWait onWorkEarn={() => setView('work-earn-0')} />}
 
-      {view === 'work-earn' && <WorkNEarn />}
+      {view === 'work-earn-0' && <WorkNEarnBranch0 onNext={() => setView('work-earn-1')} />}
+      {view === 'work-earn-1' && <WorkNEarnBranch1 onNext={() => setView('work-earn-2')} />}
+      {view === 'work-earn-2' && <WorkNEarnBranch2 onNext={() => setView('work-earn-3')} />}
+      {view === 'work-earn-3' && <WorkNEarnBranch3 onNext={() => setView('work-earn-4')} />}
+      {view === 'work-earn-4' && <WorkNEarnBranch4 onNext={() => setView('work-earn-5')} />}
+      {view === 'work-earn-5' && <WorkNEarnBranch5 onNext={() => setView('work-earn-6')} />}
+      {view === 'work-earn-6' && <WorkNEarnBranch6 onNext={() => setView('work-earn-7')} />}
+      {view === 'work-earn-7' && <WorkNEarnBranch7 onNext={() => setView('work-earn-8')} />}
+      {view === 'work-earn-8' && <WorkNEarnBranch8 onNext={() => setView('work-earn-9')} />}
+      {view === 'work-earn-9' && <WorkNEarnBranch9 onNext={() => setView('work-earn-10')} />}
+      {view === 'work-earn-10' && <WorkNEarnBranch10 />}
 
       {view === 'story' && <StoryScene onBack={() => setView('roles')} />}
     </div>

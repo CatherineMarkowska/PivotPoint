@@ -22,6 +22,12 @@ function StayCalmWait({ onWorkEarn }) {
       </div>
 
       <div className="stay-calm__actions">
+         <button type="button" >
+          Some thing some thing 1
+        </button>
+        <button type="button" >
+          Some thing some thing 2
+        </button>
         <button type="button" onClick={onWorkEarn}>
           Work and earn extra money
         </button>

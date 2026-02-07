@@ -15,6 +15,7 @@ function WorkNEarn() {
         <div className="work-earn__actions">
           <button type="button">Confront the manager</button>
           <button type="button">Withdraw the $50 and start looking for another bank</button>
+          <button type="button">Some thing some thing </button>
         </div>
       </div>
     </section>
