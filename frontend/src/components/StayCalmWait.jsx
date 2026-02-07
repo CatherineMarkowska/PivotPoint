@@ -21,6 +21,12 @@ function StayCalmWait({ onWorkEarn }) {
         <p>Family Moral: Stable</p>
       </div>
 
+      <div className="stay-calm__actions">
+        <button type="button" onClick={onWorkEarn}>
+          Work and earn extra money
+        </button>
+      </div>
+
     </section>
   )
 }

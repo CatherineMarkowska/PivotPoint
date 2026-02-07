@@ -12,17 +12,11 @@
   text-align: center;
 }
 
-<<<<<<< HEAD
-.stay-calm__text {
-  max-width: 720px;
-  margin: 0;
-=======
 .stay-calm__card {
   max-width: 720px;
   background: rgba(0, 0, 0, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 2rem;
->>>>>>> tan-branch
   line-height: 1.7;
   font-size: 1rem;
 }
@@ -32,8 +26,6 @@
   gap: 0.4rem;
   font-size: 0.9rem;
 }
-<<<<<<< HEAD
-=======
 
 .stay-calm__actions {
   display: flex;
@@ -49,4 +41,3 @@
   padding: 0.9rem 1.4rem;
   font-family: inherit;
 }
->>>>>>> tan-branch
