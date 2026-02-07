@@ -1,6 +1,6 @@
-import './SuspendedBanks.css'
+import './SuspendedBank.css'
 
-function SuspendedBanks() {
+function SuspendedBank({ onStayInLine, onGoHome, onDemand }) {
   return (
     <section className="suspended-banks">
       <div className="suspended-banks__top">
@@ -35,17 +35,26 @@ function SuspendedBanks() {
       </div>
       <div className="suspended-banks__story">
         <p>The line outside the bank stretches around the block.</p>
-        <p>You've been waiting three hours. The woman in front of you is crying. Behind you, arguments break out.</p>
+        <p>
+          You've been waiting three hours. The woman in front of you is crying. Behind you,
+          arguments break out.
+        </p>
         <p>The bank doors remain closed. A sign appears:</p>
         <p>"Temporarily suspended operations."</p>
       </div>
       <div className="suspended-banks__choices">
-        <button type="button">Stay in line. You need that money.</button>
-        <button type="button">Go home. Come back tomorrow.</button>
-        <button type="button">Demand to speak to someone.</button>
+        <button type="button" onClick={onStayInLine}>
+          Stay in line. You need the money.
+        </button>
+        <button type="button" onClick={onGoHome}>
+          Go home. Come back tomorrow.
+        </button>
+        <button type="button" onClick={onDemand}>
+          Demand to speak to someone.
+        </button>
       </div>
     </section>
   )
 }
 
-export default SuspendedBanks
+export default SuspendedBank
