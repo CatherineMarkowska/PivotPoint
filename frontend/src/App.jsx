@@ -179,7 +179,7 @@ function App() {
             alt="Film icon"
           />
           <div>
-            <p className="logo-subtitle">Immersive Era Stories</p>
+            <p className="logo-subtitle">Pivot Point</p>
           </div>
         </div>
         <nav className="site-nav">
