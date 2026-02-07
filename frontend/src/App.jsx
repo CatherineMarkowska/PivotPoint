@@ -40,14 +40,15 @@ function App() {
       status: 'soon',
       image:
         'https://assets.pewresearch.org/wp-content/uploads/sites/12/2014/10/FT_14.10.15_berlinWallPhoto.jpg',
-    {
+      },  
+      {
       title: 'Chernobyl Disaster',
       years: '1986',
       rating: 'R',
       status: 'soon',
       image:
         'https://unsplash.com/photos/yellow-and-black-house-on-brown-grass-field-q-QZw_s97Oc',
-    },
+      },
     {
       title: 'Civil Rights Movement',
       years: '1954–1968',
