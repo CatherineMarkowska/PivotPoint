@@ -3,13 +3,14 @@ import './App.css'
 import Tile from './components/Tile'
 import Era from './components/Era'
 import RoleSelect from './components/RoleSelect'
-
 import BankClerkPath from './components/BankClerkPath'
+
+import StayCalmWait from './components/StayCalmWait'
 
 
 
 function App() {
-  const [view, setView] = useState('home') // home | era | roles | story | bank-clerk
+  const [view, setView] = useState('home') // home | era | roles | story | bank-clerk | stay-calm
   const eras = [
     {
       title: 'The Great Depression',
@@ -117,7 +118,9 @@ function App() {
         />
       )}
 
-      {view === 'bank-clerk' && <BankClerkPath />}
+      {view === 'bank-clerk' && <BankClerkPath onStayCalm={() => setView('stay-calm')} />}
+
+      {view === 'stay-calm' && <StayCalmWait />}
 
       {view === 'story' && <StoryScene onBack={() => setView('roles')} />}
     </div>
