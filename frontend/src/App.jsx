@@ -15,7 +15,7 @@ function App() {
       rating: 'PG',
       status: 'start',
       image:
-        'https://unsplash.com/photos/man-in-black-and-red-jacket-holding-brown-wooden-stick-rJ6tenVnp9A',
+        'https://images.unsplash.com/photo-1587553906014-b2b4060dd6f5?q=80&w=980&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       title: 'World War II',
@@ -23,7 +23,7 @@ function App() {
       rating: 'R',
       status: 'soon',
       image:
-        'https://unsplash.com/photos/three-monoplanes-squadron-in-world-war-2-oyGmigXV030',
+        'https://images.unsplash.com/photo-1571840933517-88a527cd7008?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       title: 'Apollo 11: Moon Landing',
@@ -31,7 +31,7 @@ function App() {
       rating: 'PG',
       status: 'soon',
       image:
-        'https://unsplash.com/photos/buzz-aldrin-on-the-moon-in-front-of-the-us-flag-UeSpvB0Qo88',
+        'https://images.unsplash.com/photo-1614726365930-627c75da663e?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       title: 'Fall of the Berlin Wall',
@@ -47,7 +47,7 @@ function App() {
       rating: 'R',
       status: 'soon',
       image:
-        'https://unsplash.com/photos/yellow-and-black-house-on-brown-grass-field-q-QZw_s97Oc',
+        'https://images.unsplash.com/photo-1590355200067-675cf378fb74?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       },
     {
       title: 'Civil Rights Movement',
@@ -55,7 +55,7 @@ function App() {
       rating: 'PG-13',
       status: 'soon',
       image:
-        'https://unsplash.com/photos/civil-rights-march-on-washington-dc-WzPxmB_tRlw',
+        'https://images.unsplash.com/photo-1576568699714-a3f4950805d5?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
   ]
 
@@ -65,7 +65,7 @@ function App() {
         <div className="logo">
           <img
             className="logo-icon"
-            src="https://www.123rf.com/photo_63402711_film-clap-board-cinema-sign-white-icon-on-red-circle.html"
+            src="https://previews.123rf.com/images/asmati/asmati1610/asmati161000088/63402711-film-clap-board-cinema-sign-white-icon-on-red-circle.jpg"
             alt="Film icon"
           />
           <div>
