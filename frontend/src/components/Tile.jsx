@@ -1,6 +1,6 @@
 import './Tile.css'
 
-function Tile({ era }) {
+function Tile({ era, onStart }) {
   return (
     <article className="tile">
       <div
@@ -22,7 +22,7 @@ function Tile({ era }) {
         </div>
       </div>
       {era.status === 'start' ? (
-        <button className="primary-btn tile-btn" type="button">
+        <button className="primary-btn tile-btn" type="button" onClick={onStart}>
           Start
         </button>
       ) : (

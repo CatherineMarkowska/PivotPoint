@@ -1,8 +1,12 @@
+import { useState } from 'react'
 import './App.css'
 import Tile from './components/Tile'
+import Era from './components/Era'
+import StoryScene from './components/StoryScene'
 
 
 function App() {
+  const [view, setView] = useState('home') // home | era | story
   const eras = [
     {
       title: 'The Great Depression',
@@ -68,24 +72,37 @@ function App() {
           </div>
         </div>
         <nav className="site-nav">
+          <button className="ghost-btn" type="button" onClick={() => setView('home')}>
+            Home
+          </button>
           <a href="#now">Now Showing</a>
           <a href="#how">How It Works</a>
           <a href="#stories">Stories</a>
         </nav>
       </header>
 
-      <section id="now" className="now-showing">
-        <div className="section-title">
-          <h3>Now Showing</h3>
-          <p>Tap a story tile to enter a different era.</p>
-        </div>
+      {view === 'home' && (
+        <section id="now" className="now-showing">
+          <div className="section-title">
+            <h3>Now Showing</h3>
+            <p>Tap a story tile to enter a different era.</p>
+          </div>
 
-        <div className="tile-grid">
-          {eras.map((era) => (
-            <Tile key={era.title} era={era} />
-          ))}
-        </div>
-      </section>
+          <div className="tile-grid">
+            {eras.map((era) => (
+              <Tile
+                key={era.title}
+                era={era}
+                onStart={era.status === 'start' ? () => setView('era') : undefined}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {view === 'era' && <Era onStart={() => setView('story')} />}
+
+      {view === 'story' && <StoryScene onBack={() => setView('era')} />}
     </div>
   )
 }
