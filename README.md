@@ -17,3 +17,6 @@ npm run dev
 ```
 click on the local host link
 <img width="1187" height="721" alt="image" src="https://github.com/user-attachments/assets/31c0ee8a-c722-41e2-a29f-01912ab2dc1d" />
+
+Link to the video!
+https://www.youtube.com/watch?v=voleJHPHv2o 
